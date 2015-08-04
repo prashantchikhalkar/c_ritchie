@@ -1,2 +1,2 @@
 # c_ritchie
-covers the c programming examples from ritchie book
+covers C programming examples from ritchie book "The C Programming Language" by Brian Kernighan and Dennis Ritchie.
