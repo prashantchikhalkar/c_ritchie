@@ -1,0 +1,10 @@
+Static global  :
+Static variable has scope only in the file in which it is declared. 
+It can't be accessed in any other file but its value remains intact 
+if code is running in some other file means lifetime is in complete program .
+
+
+Static local:
+static local variable has scope in that function in which it is declared means 
+it can't be used in other functions in the same file also, 
+means scope is limited to the function in which it is declared while its life time is also through out the program. 
