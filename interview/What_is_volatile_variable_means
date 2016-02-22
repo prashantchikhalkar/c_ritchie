@@ -1,0 +1,9 @@
+volatile has nothing to deal with storage class.
+volatile just tells the compiler or force the compiler to "not to do the optimization" for that variable. 
+so compiler would not optimize the code for that variable and reading the value from the specified location, 
+not through interal register which holds the previous value.
+So, by declaring variable as volatile, it gives garrantee that you will get the latest value, 
+which may be alterred by an external event.
+your code may be work fine if haven't declare that variable as volatile, 
+but there may be chance of not getting correct value sometimes, so to avoid that we should declare variable as volatile.
+volatile is generally used when dealing with external events, like interrupts of hardware related pins.
