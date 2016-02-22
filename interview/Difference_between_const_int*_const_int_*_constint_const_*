@@ -1,0 +1,19 @@
+Difference between 
+const int*
+const int * const
+int const *
+
+You may mess up with these three definitions, a simple rule of thumb here is: read it backwards...
+
+    int* : pointer to int
+    
+    int const*: pointer to a const int, which means you cannot change *ptr
+    
+    int * const: const pointer to a int, which means you cannot point to other int
+    
+    int const* const: const pointer to const int
+
+ the first const can be on either side.
+
+    const int*
+    const int* const
