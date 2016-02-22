@@ -1,0 +1,18 @@
+NO. 
+
+The C spec actually says somewhere in it  that the main function cannot be static.
+
+The reason for this is that static means "don't let anything outside this source file use this object". 
+
+The benefit is that it protects against name collisions in C when you go to link 
+(it would be bad bad bad if you had two globals both named "is_initialized" in different files, 
+they'd get silently merged, unless you made them static). 
+
+It also allows the compiler to perform certain optimizations that it wouldn't be able to otherwise. 
+These two reasons are why static is a nice thing to have.
+
+Since you can't access static functions from outside the file, 
+how would the OS be able to access the main function to start your program? 
+That's why main can't be static.
+
+Some compilers treat "main" specially and might silently ignore you when you declare it static.
