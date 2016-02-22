@@ -1,0 +1,5 @@
+The const qualifier explicitly declares a data object as something that cannot be changed. 
+Its value is set at initialization. 
+You cannot use const data objects in expressions requiring a modifiable lvalue. 
+For example, a const data object cannot appear on the lefthand side of an assignment statement
+  int const volatile var
