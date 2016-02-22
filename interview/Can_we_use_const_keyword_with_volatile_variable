@@ -1,0 +1,7 @@
+Yes. 
+The const modifier means that this code cannot change the value of the variable, 
+but that does not mean that the value cannot be changed by means outside this code. 
+For instance, in the example  the timer structure was accessed through a volatile const pointer. 
+The function itself did not change the value of the timer, so it was declared const. 
+However, the value was changed by hardware on the computer, so it was declared volatile. 
+If a variable is both const and volatile, the two modifiers can appear in either order.
