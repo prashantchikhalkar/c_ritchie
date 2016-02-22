@@ -7,3 +7,16 @@ which may be alterred by an external event.
 your code may be work fine if haven't declare that variable as volatile, 
 but there may be chance of not getting correct value sometimes, so to avoid that we should declare variable as volatile.
 volatile is generally used when dealing with external events, like interrupts of hardware related pins.
+
+Example. reading adc values.
+
+const voltile means you can not modify or alter the value of that variable in code. 
+only external event can change the value.
+controller pins are generally defines as volatile. 
+may be by declaring variable as volatile controller will do "read by pin" not "read by latch".
+but still there is lots of confusion when to choose variable as volatile..
+A variable should be declared volatile whenever its value could change unexpectedly. 
+In practice, only three types of variables could change:
+  Memory-mapped peripheral registers
+  Global variables modified by an interrupt service routine
+  Global variables within a multi-threaded application
