@@ -1,35 +1,26 @@
+// This program will conver the spaces in the input string into underscore
+// compile with cc filename.c
+// run with ./a.out
+// Enter the string to be parsed
+// E.g. input string is "prashant v chikhalkar"
+// output string will be "prashant_v_chikhalkar"
+
 #include <stdio.h>
 #include <string.h>
-
-#if 0
-int main ()
-{
-  int c, i;
-  
-  while ((c= getchar ()) != EOF)
-  {
-    if (c == ' ')
-      putchar ('_');
-  }
-  return 0;
-}
-#endif
 
 int main ()
 {
   int i;
-  char srcstr [50];
-  // char dststr [50];
+  char str [50];
   
   printf ("Enter the string\n");
-  
   gets (srcstr);
   
-  for (i = 0; i < strlen (srcstr); i++)
+  for (i = 0; i < strlen (str); i++)
   {
-    if (srcstr [i] == ' ')
-      srcstr [i] = '_';
+    if (str [i] == ' ')
+      str [i] = '_';
   }
-  puts (srcstr);
+  printf ("%s\n", str);
   return 0; 
 }
