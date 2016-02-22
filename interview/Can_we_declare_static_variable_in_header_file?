@@ -1,0 +1,5 @@
+You can’t declare a static variable without defining it as well 
+(this is because the storage class modifiers static and extern are mutuallyexclusive). 
+A static variable can be defined in a header file, 
+but this would cause each source file that included the header file to have its own private copy of the variable, 
+which is probably not what was intended.
