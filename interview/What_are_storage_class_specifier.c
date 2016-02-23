@@ -1,12 +1,14 @@
 // defines
-#define EXPLAIN   1
-#define AUTO      0  
+
+#define EXPLAIN   0
+#define AUTO      1  
 #define STATIC    0
 #define EXTERN    0
 #define REGISTER  0
 
-
+#if 0
 #ifdef EXPLAIN
+
 What is storage class specifier?
 Storage class specifiers in C language tells the compiler :
   -> where to store a variable, 
@@ -36,7 +38,9 @@ For faster access of a variable, it is better to go for register specifiers rath
 Because, register variables are stored in register memory whereas auto variables are stored in main CPU memory.
 Only few variables can be stored in register memory. So, we can use variables as register that are used very often in a C program.
 #endif
+#endif
 
+#if 0
 #ifdef AUTO
 // Example Program for Auto variable in C
 
@@ -62,7 +66,9 @@ void increment (void)
   i++;
 }
 #endif
+#endif
 
+#if 0
 #ifdef STATIC
 // Example program for static variable in C
 #include <stdio.h>
@@ -81,13 +87,15 @@ int main ()
 
 void increment (void)
 {
-  satic int i = 0;
+  static int i = 0;
   
   printf ("i = %d\n", i);
   i++;
 }
 #endif
+#endif
 
+#if 0
 #ifdef EXTERN
 // Example program for extern variable in C
 // The scope of this extern variable is throughout the main program. 
@@ -107,7 +115,9 @@ int main ()
 }
 int y = 50;
 #endif
+#endif
 
+#if 1
 #ifdef REGISTER
 // Example program for register variable in C
 // Register variables are also local variables, but stored in register memory.
@@ -121,7 +131,7 @@ int y = 50;
 int main ()
 {
   register int i;
-  it arr[5];  // declaring array
+  int arr[5];  // declaring array
   
   arr [0] = 10; // initializing array
   arr [1] = 20;
@@ -134,4 +144,5 @@ int main ()
   }
   return 0;
 }
+#endif
 #endif
