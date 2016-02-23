@@ -1,0 +1,33 @@
+Void pointer or generic pointer is a special type of pointer that can be pointed at objects of any data type. 
+A void pointer is declared like a normal pointer, using the void keyword as the pointer’s type.
+
+Pointers defined using specific data type cannot hold the address of the some other type of variable 
+i.e. it is incorrect in C to assign the address of an integer variable to a pointer of type float.
+
+Example:
+
+float *f; //pointer of type float
+int i;  //integer variable
+f = &i; //compilation error
+
+The above problem can be solved by general purpose pointer called void pointer.
+
+Void pointer can be declared as follows:
+
+void *v // defines a pointer of type void
+
+The pointer defined in this manner do not have any type associated with them and can hold the address of any type of variable.
+
+Example:
+
+void *v;
+int *i;
+int ivar;
+char chvar;
+float fvar;
+v = &ivar; // valid
+v = &chvar; //valid
+v = &fvar; // valid
+i = &ivar; //valid
+i = &chvar; //invalid
+i = &fvar; //invalid  
