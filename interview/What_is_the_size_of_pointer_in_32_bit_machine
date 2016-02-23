@@ -1,4 +1,13 @@
 Sizeof  of pointer in 32 bit machine is always 4 bytes.
 
+#include <stdio.h>
 
-
+int main()
+{
+    int *p = NULL;
+    if(sizeof(p) == 4)
+        printf("Machine is 32 bit\n");
+    else
+        printf("Machine is 64 bit\n");
+    return 0;
+}
