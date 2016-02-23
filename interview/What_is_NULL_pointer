@@ -1,0 +1,5 @@
+Null pointer is special reserved value of a pointer. 
+A pointer of any type has such a reserved value. 
+
+Formally, each specific pointer type (int*, char*) has its own dedicated null-pointer value. 
+Conceptually, when a pointer has that null value it is not pointing anywhere.
