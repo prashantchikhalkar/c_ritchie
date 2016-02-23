@@ -1,0 +1,7 @@
+In C programming, one of the frequently arising problem is to handle similar types of data. 
+
+For example: If the user want to store marks of 100 students. 
+This can be done by creating 100 variable individually but, this process is rather tedious and impracticable. 
+These type of problem can be handled in C programming using arrays.
+
+An array is a sequence of data item of homogeneous value(same type).
