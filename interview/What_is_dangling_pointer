@@ -1,0 +1,22 @@
+A dangling pointer points to memory that has already been freed. 
+The storage is no longer allocated. Trying to access it might cause a Segmentation fault.
+
+Common way to end up with a dangling pointer:
+
+char* func()
+{
+   char str[10];
+   strcpy(str,"Hello!");
+   return(str); 
+}
+//returned pointer points to str which has gone out of scope. 
+
+You are returning an address which was a local variable, 
+which would have gone out of scope by the time control was returned to the calling function. (Undefined behaviour)
+
+Another common dangling pointer example is an access of a memory location via pointer, 
+after free has been explicitly called on that memory.
+
+int *c = malloc(sizeof(int));
+free(c);
+*c = 3; //writing to freed location!
