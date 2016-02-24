@@ -1,0 +1,32 @@
+// c program to compare two strings without using strcmp library function
+
+#include <stdio.h>
+
+int my_strcmp (char *str_2, const char *str_1)
+{
+  while (*str_1 != '\0' && *str_2 != '\0')
+  {
+    str_1++;
+    str_2++;
+  }
+  return (*str_1 - *str_2);
+}
+
+int main ()
+{
+  int i;
+  
+  char str_1 [10] = "prashant";
+  char str_2 [10] = "compare";
+  
+  i = my_strcmp (str_2, str_1);
+  
+  if (i == 0)
+    printf ("strings are EQUAL\n");
+  else if (i < 0)
+    printf ("string_1 is less than string_2\n");
+  else if (i > 0)
+    printf ("string_1 is greater than string_2");
+    
+  return 0;  
+}
