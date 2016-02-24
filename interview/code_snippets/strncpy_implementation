@@ -1,0 +1,33 @@
+// c program to copy n char from one string to other
+// without using strncpy library function
+
+#include <stdio.h>
+
+void my_strncpy (char *dest, const char *src, int n)
+{
+  while (*src != '\0' && n != 0)
+  {
+    *dest = *src;
+    dest++;
+    src++;
+    n--;
+  }
+  while (n)
+  {
+    *dest = '\0';
+    n--;
+  }
+}
+
+int main ()
+{
+  char src [10] = "source";
+  char dest [20];
+  int n = 2;
+  
+  my_strncpy (dest, src, n);
+  
+  printf ("Destination string = %s\n", dest);
+  
+  return 0;
+}
