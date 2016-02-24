@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+#define SIZE_OF_VAR(var) ((char *) (&var + 1) - (char *) (&var))
+
+int main ()
+{
+    char c;
+    short sh;
+    int i;
+    float f;
+    double d;
+    
+    int *ptr;
+    
+    int arr[5];
+    char str [5];
+    
+    typedef struct
+    {
+        char c;
+        int i;
+        float f;
+        double d;
+        char *ptr;
+    }sample;
+    
+    sample s1, s2;
+    
+    printf ("size of char = %d\n", SIZE_OF_VAR (c));
+    printf ("size of short = %d\n", SIZE_OF_VAR (sh));
+    printf ("size of int = %d\n", SIZE_OF_VAR (i));
+    printf ("size of float = %d\n", SIZE_OF_VAR (f));
+    printf ("size of double = %d\n", SIZE_OF_VAR (d));
+    printf ("size of pointer = %d\n", SIZE_OF_VAR (ptr));
+    printf ("size of array = %d\n", SIZE_OF_VAR (arr));
+    printf ("size of string = %d\n", SIZE_OF_VAR (str));
+    printf ("size of structure = %d\n", SIZE_OF_VAR (s1));
+}
