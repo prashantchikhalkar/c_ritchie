@@ -1,0 +1,23 @@
+// program to illustrate difference between sizeof and strlen opertion on string
+
+#include <stdio.h>
+#include <string.h>
+
+int main ()
+{
+  char str [] = "prashant";
+  
+  printf ("%d\n", sizeof (str));
+  printf ("%d\n", strlen (str));
+}
+
+#if 0
+Ans :
+9
+8
+
+Here, char str [] = "'p''r''a''s''h''a''n''t''\0'";
+so, 
+sizeof operator always counts NULL character 
+whereas, strlen will skip the NULL character
+#endif
