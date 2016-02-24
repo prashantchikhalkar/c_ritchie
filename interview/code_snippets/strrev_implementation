@@ -1,0 +1,43 @@
+// c program to reverse a string without using strrev library function
+
+#include <stdio.h>
+
+void my_strrev (char *str, int size)
+{
+  int i;
+  char temp;
+  
+  for (i = 0; i <= size/2; i++)
+  {
+    temp = str [i];
+    str [i] = str [size - i];
+    str [size - i] = temp;
+  }
+}
+
+int my_strlen (const char *str)
+{
+  int length;
+  
+  while (*str != '\0')
+  {
+    str++;
+    length++;
+  }
+  return length;
+}
+
+int main ()
+{
+  char str [10] = "prashant";
+  
+  int length;
+  
+  length = my_strlen (str);
+  
+  my_strrev (str, length - 1);
+  
+  printf ("Reverse string = %s\n", str);
+  
+  return 0;
+}
