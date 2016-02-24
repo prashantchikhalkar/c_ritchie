@@ -1,0 +1,18 @@
+The string in C programming language is actually a one-dimensional array of characters 
+which is terminated by a null character '\0'. 
+Thus a null-terminated string contains the characters that comprise the string followed by a null.
+
+What is difference between these two,
+
+char ptr[] = "string";
+char *ptr = "string";
+
+The two declarations are not the same.
+
+First one is the array of character i.e. string and second one is the string literals.
+
+char ptr[] = "string"; declares a char array of size 7 and initializes it with the characters s ,t,r,i,n,g and \0. 
+You are allowed to modify the contents of this array.
+
+char *ptr = "string"; declares ptr as a char pointer and initializes it with address of string literal "string" which is read-only.
+Modifying a string literal is an undefined behavior. What you saw(seg fault) is one manifestation of the undefined behavior.
