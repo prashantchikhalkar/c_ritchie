@@ -26,5 +26,6 @@ int main (void)
 
 	new_number = setbit (num, position, new_number);
 
-	printf ("Given Number %d after setting bit number %d becomes %d\n", num, position, new_number);
+	printf ("Given Number %d after setting bit number %d becomes %d\n", 
+	num, position, new_number);
 }
