@@ -26,11 +26,14 @@ int myAtoi (char *str)
 
 int main (void)
 {
-	char str [20] = {'\0'};
+	char str [20] = "abc";
+	//char str [20] =  "-123";
+	//char str [20] =  "89789";
 	int val = 0;
 
-	printf ("Enter the string\n");
-	gets (str);
+	//printf ("Enter the string\n");
+
+	//gets (str);
 
 	val = myAtoi (str);
 	printf ("%d\n", val);
