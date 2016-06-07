@@ -14,7 +14,7 @@ int main ()
   char str [50];
   
   printf ("Enter the string\n");
-  gets (srcstr);
+  gets (str);
   
   for (i = 0; i < strlen (str); i++)
   {
