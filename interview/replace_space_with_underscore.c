@@ -5,13 +5,15 @@
 // E.g. input string is "prashant v chikhalkar"
 // output string will be "prashant_v_chikhalkar"
 
+#define SIZE  100
+
 #include <stdio.h>
 #include <string.h>
 
 int main ()
 {
   int i;
-  char str [50];
+  char str [SIZE];
   
   printf ("Enter the string\n");
   gets (str);
