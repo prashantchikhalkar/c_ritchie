@@ -7,21 +7,13 @@ Before understanding what ‘volatile‘ does, let us first go through the below
 int main ( )
 
 {
-
-int a, i;
-
-for( i = 0; i < 10; i++ )
-
-{
-
-a = 5;
-
-printf ( “Subhash has %d books\n”, a );
-
-}
-
-return 0;
-
+  int a, i;
+  
+  for( i = 0; i < 10; i++ ) {
+    a = 5;
+    printf ( “prashant has %d books\n”, a );
+  }
+  return 0;
 }
 
 /*
@@ -36,23 +28,13 @@ Now, consider the below program using volatile qualifier.
 */
 
 int main ( )
-
 {
-
-volatile int a, i;
-
-for( i = 0; i < 10; i++ )
-
-{
-
-a = 5;
-
-printf ( “Subhash has %d books\n”, a );
-
-}
-
-return 0;
-
+  volatile int a, i;
+  for( i = 0; i < 10; i++ ) {
+    a = 5;
+    printf ( “Subhash has %d books\n”, a );
+  }
+  return 0;
 }
 
 /*
@@ -64,5 +46,5 @@ The above program is just to explain how ‘volatile‘ avoids optimization done
 Practically, ‘volatile‘ not applied on a plain variable like shown above ( i.e. ‘a’ ). 
 It is used on pointers that are pointing to an external device or in other words, 
 which contains a port address of an external device whose value could change asynchronously during runtime. 
-These kind of variables are mostly used while programming for embedded system devices  and also while programming multithreaded applications.
+These kind of variables are mostly used while programming for embedded system devices and also while programming multithreaded applications.
 */
