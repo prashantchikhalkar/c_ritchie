@@ -6,7 +6,10 @@ int main() {
   int i;
 
   /* calculate the factorial using a for loop  here*/
-   
-
+	for (i = 0; i < 10; i++)
+    {
+     	factorial = factorial * array[i];   
+    }
+    
   printf("10! is %d.\n", factorial);
 }
