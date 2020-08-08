@@ -6,6 +6,7 @@ int main() {
 
     while (i < 10) {
         /* your code goes here */
+        if (array[i] < 5 && array [i] > 10)
 
         printf("%d\n", array[i]);
         i++;
