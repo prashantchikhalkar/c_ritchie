@@ -13,3 +13,10 @@ int main() {
 }
 
 /* write your function here */
+void print_big(int number)
+{
+ 	if (number > 10)
+    {
+     	printf ("%d is big\n", number);   
+    }
+}
