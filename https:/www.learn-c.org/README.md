@@ -11,3 +11,5 @@ Structure
 Function Arguments by Reference
 
 Dynamic Allocation
+
+Arrays and Pointers
