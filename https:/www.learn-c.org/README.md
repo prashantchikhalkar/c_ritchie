@@ -15,3 +15,5 @@ Dynamic Allocation
 Arrays and Pointers
 
 Recursion
+
+Linked Lists.
