@@ -17,3 +17,5 @@ Arrays and Pointers
 Recursion
 
 Linked Lists.
+
+Binary Trees.
