@@ -81,7 +81,7 @@ void printDFS(node_t * current)
 {
   /* change the code here */
   if (current == NULL)         return;   /* security measure */
-  if (current->left != NULL)   printDFS(current->left);
   if (current != NULL)         printf("%d ", current->val);
+  if (current->left != NULL)   printDFS(current->left);
   if (current->right != NULL)  printDFS(current->right);
 }
